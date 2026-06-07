@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aetherflux Storm Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="card hero">
+      <h1>Aetherflux Storm Tracker</h1>
+      <p>Track spells cast this turn and Aetherflux Reservoir life gain.</p>
+    </section>
+
+    <section class="grid">
+      <div class="card stat">
+        <span class="label">Storm Count</span>
+        <strong id="stormCount">0</strong>
+      </div>
+      <div class="card stat">
+        <span class="label">Next Life Gain</span>
+        <strong id="nextGain">1</strong>
+      </div>
+      <div class="card stat">
+        <span class="label">Life Gained This Turn</span>
+        <strong id="lifeGained">0</strong>
+      </div>
+      <div class="card stat">
+        <span class="label">Current Life</span>
+        <strong id="currentLife">40</strong>
+      </div>
+    </section>
+
+    <section class="card controls">
+      <button id="castSpell" class="primary">Cast Spell</button>
+      <button id="undoSpell">Undo</button>
+      <button id="newTurn">New Turn</button>
+      <button id="payReservoir" class="danger">Pay 50 Life</button>
+    </section>
+
+    <section class="card setup">
+      <label>
+        Starting life
+        <input id="startingLife" type="number" value="40" min="0" />
+      </label>
+      <button id="setLife">Set Life</button>
+      <button id="resetAll">Reset All</button>
+    </section>
+
+    <section class="card">
+      <h2>Spell Log</h2>
+      <ol id="log" class="log"></ol>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
